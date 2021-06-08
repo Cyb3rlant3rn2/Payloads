@@ -1,0 +1,8 @@
+Remote Code Execution   
+
+   https://www.evonide.com/how-we-broke-php-hacked-pornhub-and-earned-20000-dollar/
+    https://blog.doyensec.com/2017/08/03/electron-framework-security.html
+    https://sites.google.com/site/testsitehacking/-36k-google-app-engine-rce
+    https://hackerone.com/reports/135072
+    http://www.pranav-venkat.com/2016/03/command-injection-which-got-me-6000.html?view=sidebar
+

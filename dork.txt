@@ -1,0 +1,5 @@
+site:issuu.com   ext:txt OR ext:docx OR ext:csv
+
+site:https://www.bitsoffreedom.nl/ ext:log OR ext:swf OR ext:txt OR ext:pdf OR ext:csv OR ext:rtf OR ext:backup OR ext:sql OR ext:swf OR ext:tpl OR ext:yrl OR ext:wml OR ext:xls OR ext:xlsx OR ext:xml OR ext:yml OR ext:ysd  OR ext:reg OR ext:pwd OR ext:rdp OR ext:pgp OR ext:pem OR ext:pcf OR ext:passwd OR ext:ora OR ext:old OR ext:json OR ext:key OR ext:log OR ext:lst OR ext:mai OR ext:mbox OR ext:mbx 
+
+site:https://boozt.com/  ext:mdb OR ext:md OR ext:nsf OR ext:cache OR ext:cfg OR ext:cgi OR ext:cnf OR ext:csr OR ext:axd

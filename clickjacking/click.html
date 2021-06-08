@@ -1,0 +1,25 @@
+<head>
+  <style>
+    #target_website {
+      position:relative;
+      width:128px;
+      height:128px;
+      opacity:0.00001;
+      z-index:2;
+      }
+    #decoy_website {
+      position:absolute;
+      width:300px;
+      height:400px;
+      z-index:1;
+      }
+  </style>
+</head>
+...
+<body>
+  <div id="decoy_website">
+  ...decoy web content here...
+  </div>
+  <iframe id="target_website" src="https://university.branch.io/guides/2ecc3f54-cc63-11ea-9487-06c0361096e5/tasks/51a6be70-d2c4-11ea-b3a3-067360dfb065">
+  </iframe>
+</body>

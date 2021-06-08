@@ -1,0 +1,162 @@
+Web based-
+1)Spf record
+2)login
+	i.weak password policy
+	ii.ldap
+	iii.password policy bypass
+	iv.Fake mail register
+3)Forgot password
+	i.Rate Limit
+       ii.Reset Token bruteforce
+      iii.Reset Token validation
+      
+4)Cookies-
+	i)Cookie jacking
+	ii)Cookie encryption
+5)Broken Authentication
+
+6)Manipulation of Post request
+7)XXE-
+	i)On all post request
+8)Idor
+    i)Check for bugs by changing id's
+    ii)If changin id's does not work then try to change the request method.
+    iii)Look for leakage of unpredictable user id's user.
+    iv) Try Idor by changing the value of the referer header
+    v)
+9)sql
+10)XSS
+11)Blind xss
+12)Access to files
+13)CSRF	-	
+	i.Normal csrf
+	ii.Csrf Token bypass
+	iii.Csrf token expire
+	iv.Csrf token bruteforce
+	v)without token
+	vi)Chnaging the request method
+	vii)csrf token not tied to a specific session
+	viii)csrf where token is not tied to specific user session
+	ix)csrf token is duplicated in cookie
+	x)Referer-based defenses against CSRF
+	xi)validation of referer can be circumvented
+	x)json csrf
+
+14)Malicious File Upload
+	1)XXE
+	2)RCE
+	3)malware
+	4)ImageMagick Is On Fire — CVE-2016–3714
+	
+15)API endpoints
+	1)Acess control
+		/userid
+		/username
+	2)Rate Limit
+	3)Input Validation
+	4)Restricting HTTP methods
+	5)third party api abuse
+16)Broken access control
+	via two accounts.
+	look into javascript for hidden admin pages
+	use of unsual http headers to bypasss restriction by cms X-Original-URL and X-Rewrite-URL
+	user alternate http methods
+	
+
+17)Browser cache
+
+18)File traversal
+
+19)CRLF
+
+
+20)JSTL injection
+
+21)Privilige esclation
+
+22)Session Fixation
+
+23)Session Timeout
+
+24)Parameter Pollution
+
+25)Injections
+	i.LDAP injection
+       ii.XML injection
+      iii.code injection
+       iv.os injection
+	v.ssti
+
+26)Weak ciphers(https://www.ssllabs.com/ssltest/a)
+
+27)Padding oracle
+	i. PadBuster - https://github.com/GDSSecurity/PadBuster   
+	ii. python-paddingoracle - https://github.com/mwielgoszewski/python-paddingoracle 
+
+28)Open redirect
+	spider
+  	filter for redirect
+	
+29)Clickjacking
+
+30)CORS
+
+31)Host Header injection
+	X-Forwarded-Host
+	True-Client-ip
+
+32)Exif meta data o image
+
+33)OTP  bypass
+
+34)Java web tokens
+	i
+	ii
+
+35)Stored XSS via image
+
+36)Email xss
+
+37)Broken authentication session management
+	i)create two windows change password in one
+
+38)Insecure account deletion
+
+39)Cross origin communication 
+
+40) 2FA bypass
+	i)rate limit on sms code  and its bypass
+	ii)2FA bypass by forgot password
+	iii)2FA bypass by oauth signing
+	iv)copy and pasting reset req header to set headers
+41)SSRF
+	i)using ngrok or buro collaborator
+	ii)using protocol like tel://  gopher:// 
+	iii)bruteforicng list of ports and see the response.
+42)post message 
+
+43)Check if the password reset link works on http.
+
+44)i)check for jenkins.subdomain.com/script
+    ii)check for manage plugins and add terminal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

